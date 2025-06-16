@@ -1,0 +1,431 @@
+﻿<Window x:Class="COMOLEAutomationDocumentation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+    xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+    Title="COMOLE Automation documentation" Height="725" Width="800" ResizeMode="CanMinimize" Name="WindowPCSCHEMATICOLEToolInVB">
+    <Grid>
+        <TabControl Name="Tabs" Background="White" Height="556" VerticalAlignment="Top" Width="778">
+            <TabItem Header="Connect to Automation" Name="ConnectToAutomationTab">
+                <Grid>
+                    <Button Margin="6,6,0,0" Name="ButtonConnectToAutomation" Height="25" Width="230" HorizontalAlignment="Left" VerticalAlignment="Top">Connect to Automation</Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Projects" IsEnabled="False" Name="TabProjects">
+                <Grid>
+                    <Label Height="25" HorizontalAlignment="Left" Margin="6,6,0,0" Name="LabelProjectProperties" VerticalAlignment="Top" Width="191">Project properties:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,37,0,0" Name="LabelProjectName" VerticalAlignment="Top" Width="70">Name:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,68,0,0" Name="LabelProjectPath" VerticalAlignment="Top" Width="70">Path:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,99,0,0" Name="LabelProjectFile" VerticalAlignment="Top" Width="70">File:</Label>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="82,37,0,0" Name="TextBoxProjectName" VerticalAlignment="Top" Width="115">TestProject</TextBox>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="82,68,0,0" Name="TextBoxProjectPath" VerticalAlignment="Top" Width="115">C:\temp\TestProj</TextBox>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="82,99,0,0" Name="TextBoxProjectFile" VerticalAlignment="Top" Width="115">TestProject.PRO</TextBox>
+                    <Button Height="25" HorizontalAlignment="Left" Margin="82,130,0,0" Name="ButtonCreateProject" VerticalAlignment="Top" Width="115">Create project</Button>
+                    <Label Height="25" HorizontalAlignment="Left" Margin="6,161,0,0" Name="LabelPageProperties" VerticalAlignment="Top" Width="191">Page properties:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,192,0,0" Name="LabelPageTitle" VerticalAlignment="Top" Width="70">Title:</Label>
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,223,0,0" Name="label21" Width="70" Height="25.04" VerticalAlignment="Top">Type:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,254.04,0,0" Name="label52" VerticalAlignment="Top" Width="70">Function:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,285.04,0,0" Name="label53" VerticalAlignment="Top" Width="70">Tab:</Label>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="82,192,0,0" Name="TextBoxPageTitle" VerticalAlignment="Top" Width="115">TestPage</TextBox>
+                    <ComboBox HorizontalAlignment="Left" IsEditable="False" IsEnabled="True" Margin="82,223,0,0" Name="ComboBoxPageType" SelectedIndex="0" Width="115" Height="25.04" VerticalAlignment="Top">
+                        <ComboBoxItem>pt_SCHEMATIC</ComboBoxItem>
+                        <ComboBoxItem>pt_GroundPlane</ComboBoxItem>
+                        <ComboBoxItem>pt_ISOmetric</ComboBoxItem>
+                        <ComboBoxItem>pt_SemiISO</ComboBoxItem>
+                        <ComboBoxItem>pt_Ignore</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Height="25" HorizontalAlignment="Left" IsEditable="False" IsEnabled="True" Margin="82,254.04,0,0" Name="ComboBoxPageFunction" SelectedIndex="0" VerticalAlignment="Top" Width="115">
+                        <ComboBoxItem>pf_Normal</ComboBoxItem>
+                        <ComboBoxItem>pf_Ignore</ComboBoxItem>
+                        <ComboBoxItem>pf_Unit</ComboBoxItem>
+                        <ComboBoxItem>pf_Index</ComboBoxItem>
+                        <ComboBoxItem>pf_Part</ComboBoxItem>
+                        <ComboBoxItem>pf_Power</ComboBoxItem>
+                        <ComboBoxItem>pf_Comp</ComboBoxItem>
+                        <ComboBoxItem>pf_Term</ComboBoxItem>
+                        <ComboBoxItem>pf_Cable</ComboBoxItem>
+                        <ComboBoxItem>pf_PLC</ComboBoxItem>
+                        <ComboBoxItem>pf_Net</ComboBoxItem>
+                        <ComboBoxItem>pf_TermPlan</ComboBoxItem>
+                        <ComboBoxItem>pf_CablePlan</ComboBoxItem>
+                        <ComboBoxItem>pf_Divider</ComboBoxItem>
+                        <ComboBoxItem>pf_ConnPlan</ComboBoxItem>
+                        <ComboBoxItem>pf_SymbolDoc</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="False" Margin="82,316.04,0,0" Name="TextBoxPageTabName" VerticalAlignment="Top" Width="115">SpecificPage</TextBox>
+                    <ComboBox Height="25" HorizontalAlignment="Left" IsEditable="False" IsEnabled="True" Margin="82,285.04,0,0" Name="ComboBoxPageTab" SelectedIndex="0" VerticalAlignment="Top" Width="115">
+                        <ComboBoxItem>Pagenumber</ComboBoxItem>
+                        <ComboBoxItem>Specified name</ComboBoxItem>
+                    </ComboBox>
+                    <Button Height="25" Margin="82,443.04,0,0" Name="ButtonCreatePage" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115">Create page</Button>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,316.04,0,0" Name="label54" VerticalAlignment="Top" Width="70">Specify:</Label>
+                    <Button Height="25" Margin="203,7,0,0" Name="ButtonFindOpenProjects" VerticalAlignment="Top" HorizontalAlignment="Left" Width="559">Find open projects</Button>
+                    <ListBox Margin="203,38,0,0" Name="ListBoxFoundOpenProjects" Height="117" VerticalAlignment="Top" HorizontalAlignment="Left" Width="559" />
+                    <ListBox Margin="203,192,0,0" Name="ListBoxPages" Height="245.04" VerticalAlignment="Top" HorizontalAlignment="Left" Width="559" />
+                    <Label Height="25" Margin="203,161,0,0" Name="LabelPages" VerticalAlignment="Top" HorizontalAlignment="Left" Width="181.215">Pages:</Label>
+                    <Button Height="25" HorizontalAlignment="Left" Margin="647,443.04,0,0" Name="ButtonSetAsActivePage" VerticalAlignment="Top" Width="115" IsEnabled="False">Set as active page</Button>
+                    <ComboBox Height="25" HorizontalAlignment="Left" Margin="82,381,0,0" Name="ComboBoxPrimaryPageHeader" VerticalAlignment="Top" Width="115" />
+                    <ComboBox Height="25" HorizontalAlignment="Left" Margin="82,412,0,0" Name="ComboBoxSecondaryPageHeader" VerticalAlignment="Top" Width="115" />
+                    <Label Height="25" HorizontalAlignment="Left" Margin="6,350.04,0,0" Name="Label3" VerticalAlignment="Top" Width="191">Header properties:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" Margin="6,381,0,0" Name="Label4" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right">Primary:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" Margin="6,412.04,0,0" Name="Label5" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right">Secondary:</Label>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Symbols" Name="TabSymbols" IsEnabled="False">
+                <Grid>
+                    <Label Height="25" Margin="6,6,0,0" Name="LabelPositionOfTheSymbol" VerticalAlignment="Top" HorizontalAlignment="Left" Width="181.215">Position of the symbol:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,37,0,0" Name="LabelSymbol" VerticalAlignment="Top" Width="60">Symbol:</Label>
+                    <ComboBox Height="25" IsEditable="False" IsEnabled="True" Margin="72,37,0,0" Name="ComboBoxSymbolDirectory" SelectedIndex="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115"></ComboBox>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,99,0,0" Name="LabelX" VerticalAlignment="Top" Width="60">X:</Label>
+                    <TextBox Height="25" IsEnabled="True" Margin="72,99,0,0" Name="TextBoxSymbolXPosition" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115">30000</TextBox>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,130,0,0" Name="label16" VerticalAlignment="Top" Width="60">Y:</Label>
+                    <TextBox Height="25" IsEnabled="True" Margin="72,130,0,0" Name="TextBoxSymbolYPosition" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115">30000</TextBox>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,161,0,0" Name="label17" VerticalAlignment="Top" Width="60">Z:</Label>
+                    <TextBox Height="25" IsEnabled="True" Margin="72,161,0,0" Name="TextBoxSymbolZPosition" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115">0</TextBox>
+                    <ListBox Margin="193,38,0,0" Name="ListBoxFoundSymbols" HorizontalAlignment="Left" Width="569" Height="148" VerticalAlignment="Top" />
+                    <Button Height="25" Margin="193,6.48,0,0" Name="ButtonFindSymbols" VerticalAlignment="Top" HorizontalAlignment="Left" Width="569">Find symbols on active page</Button>
+                    <Label Height="25" Margin="6,192,0,0" Name="label22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="181">Symbol properties:</Label>
+                    <TextBox IsEnabled="True" Margin="72,223,0,0" Name="TextBoxSymbolName" HorizontalAlignment="Left" Width="115" Height="25.04" VerticalAlignment="Top"></TextBox>
+                    <TextBox IsEnabled="True" Margin="72,254.04,0,0" Name="TextBoxSymbolArticle" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115" />
+                    <TextBox Height="25" IsEnabled="True" Margin="72,285.04,0,0" Name="TextBoxSymbolType" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115" />
+                    <TextBox Height="25" IsEnabled="True" Margin="72,319.04,0,0" Name="TextBoxSymbolFunction" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115" />
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,223,0,0" Name="label23" Width="60" Height="25.04" VerticalAlignment="Top">Name:</Label>
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,254.04,0,0" Name="label24" Width="60" Height="25" VerticalAlignment="Top">Article:</Label>
+                    <Label Height="25" HorizontalContentAlignment="Right" Margin="6,285.04,0,0" Name="label25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">Type:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,316.04,0,0" Name="label26" VerticalAlignment="Top" Width="60">Function:</Label>
+                    <Label Margin="6,350.04,0,0" Name="ST_SizeOfSymbolLabel" HorizontalAlignment="Left" Width="181" Visibility="Hidden" Height="25" VerticalAlignment="Top">Size of symbol:</Label>
+                    <TextBox IsEnabled="True" Margin="72,381,0,0" Name="TextBoxSymbolHeight" Width="115" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Visibility="Hidden">2500</TextBox>
+                    <TextBox IsEnabled="True" Margin="72,412.04,0,0" Name="TextBoxSymbolWidth" Width="115" HorizontalAlignment="Left" Visibility="Hidden" Height="25" VerticalAlignment="Top">2500</TextBox>
+                    <Button Height="25" Margin="72,443.04,0,0" Name="ButtonCreateSymbol" VerticalAlignment="Top" IsEnabled="False" HorizontalAlignment="Left" Width="115">Create symbol</Button>
+                    <ComboBox IsEditable="False" IsEnabled="False" Margin="72,68,0,0" Name="ComboBoxSymbol" SelectedIndex="0" Text="&lt;Select Dir&gt;" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115">
+                        <ComboBoxItem>&lt;Select Symbol&gt;</ComboBoxItem>
+                    </ComboBox>
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,381.04,0,0" Name="ST_HeightLabel" Width="60" Height="25" VerticalAlignment="Top" Visibility="Hidden">Height:</Label>
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,412.04,0,0" Name="ST_WidthLabel" Width="60" Visibility="Hidden" Height="25" VerticalAlignment="Top">Width:</Label>
+                    <Label Height="25" Margin="193,350.04,0,0" Name="label56" VerticalAlignment="Top" HorizontalAlignment="Left" Width="181" HorizontalContentAlignment="Left">Symbol dimensions:</Label>
+                    <Button HorizontalAlignment="Left" Margin="647,192,0,0" Name="ButtonDeleteSymbol" Width="115" Height="25" VerticalAlignment="Top" IsEnabled="False">Delete symbol</Button>
+                    <Button Height="25" HorizontalAlignment="Left" IsEnabled="False" Margin="526,192,0,0" Name="ButtonUpdateSymbol" VerticalAlignment="Top" Width="115">Update symbol</Button>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="False" Margin="405,192,0,0" Name="TextBoxSymbolFileName" VerticalAlignment="Top" Width="115" IsReadOnly="True" />
+                    <Label Height="25" Margin="339,192,0,0" Name="label2" VerticalAlignment="Top" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Width="60">File:</Label>
+                    <Label Height="25.04" HorizontalContentAlignment="Right" Margin="380,412.04,0,0" Name="label60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">Left:</Label>
+                    <TextBox Height="25.04" HorizontalAlignment="Left" IsEnabled="True" Margin="446,412,0,0" Name="TextBoxSymbolLeft" VerticalAlignment="Top" Width="115" IsReadOnly="True" />
+                    <Label Height="25.04" HorizontalContentAlignment="Right" Margin="380,441,0,0" Name="label61" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">Right:</Label>
+                    <TextBox Height="25.04" HorizontalAlignment="Left" IsEnabled="True" Margin="446,443,0,0" Name="TextBoxSymbolRight" VerticalAlignment="Top" Width="115" IsReadOnly="True" />
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="193,381,0,0" Name="label57" Width="60" Height="25.04" VerticalAlignment="Top">Type:</Label>
+                    <ComboBox HorizontalAlignment="Left" IsEditable="False" IsEnabled="True" Margin="259,381,0,0" Name="ComboBoxSymbolDimensionType" SelectedIndex="1" Width="115" Height="25.04" VerticalAlignment="Top">
+                        <ComboBoxItem>rt_BlankText</ComboBoxItem>
+                        <ComboBoxItem>rt_Raw</ComboBoxItem>
+                        <ComboBoxItem>rt_Relative</ComboBoxItem>
+                        <ComboBoxItem>rt_Reserved1</ComboBoxItem>
+                        <ComboBoxItem>rt_WithReference</ComboBoxItem>
+                        <ComboBoxItem>rt_WithTexts</ComboBoxItem>
+                        <ComboBoxItem>rt_WithTextsAlsoBlank</ComboBoxItem>
+                    </ComboBox>
+                    <Label Height="25.04" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="193,412,0,0" Name="label58" VerticalAlignment="Top" Width="60">Top:</Label>
+                    <TextBox Height="25.04" HorizontalAlignment="Left" IsEnabled="True" Margin="259,412,0,0" Name="TextBoxSymbolTop" VerticalAlignment="Top" Width="115" IsReadOnly="True" />
+                    <Label Height="25.04" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="193,443,0,0" Name="label59" VerticalAlignment="Top" Width="60">Bottom:</Label>
+                    <TextBox Height="25.04" HorizontalAlignment="Left" IsEnabled="True" Margin="259,443,0,0" Name="TextBoxSymbolBottom" VerticalAlignment="Top" Width="115" IsReadOnly="True" />
+                    <Label Height="25" Margin="193,192,0,0" Name="label1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="181">Symbol connctions:</Label>
+                    <ListBox Margin="193,223,0,0" Name="ListBoxSymbolConnections" IsEnabled="False" HorizontalAlignment="Left" Width="569" Height="121.04" VerticalAlignment="Top" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Lines" Name="TabLines" IsEnabled="False">
+                <Grid>
+                    <Label Height="25" Name="label7" Width="181" HorizontalAlignment="Left" Margin="6,6,0,0" VerticalAlignment="Top" Grid.Column="1">Position of the line:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,37,0,0" Name="label8" VerticalAlignment="Top" Width="60" Grid.Column="1">X:</Label>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,37,0,0" Name="TextBoxLineXPosition" VerticalAlignment="Top" Width="115" Grid.Column="1">30000</TextBox>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,68,0,0" Name="label9" VerticalAlignment="Top" Width="60" Grid.Column="1">Y:</Label>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,68,0,0" Name="TextBoxLineYPosition" VerticalAlignment="Top" Width="115" Grid.Column="1">30000</TextBox>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,99,0,0" Name="label10" VerticalAlignment="Top" Width="60" Grid.Column="1">Z:</Label>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,99,0,0" Name="TextBoxLineZPosition" VerticalAlignment="Top" Width="115" Grid.Column="1">0</TextBox>
+                    <Label Height="25" HorizontalAlignment="Left" Margin="6,130,0,0" Name="label12" VerticalAlignment="Top" Width="181" Grid.Column="1">Line properties:</Label>
+                    <Label Height="25" Margin="6,192,0,0" Name="label27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60" HorizontalContentAlignment="Right" Grid.Column="1">Width:</Label>
+                    <Label Margin="6,223.02,0,0" Name="label28" HorizontalAlignment="Left" Width="60" HorizontalContentAlignment="Right" Grid.Column="1" Height="25" VerticalAlignment="Top">Distance:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" Margin="6,161,0,0" Name="label13" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Right" Grid.Column="1">Color:</Label>
+                    <ComboBox Height="25" Margin="72,161,0,0" Name="ComboBoxLineColor" VerticalAlignment="Top" Width="115" HorizontalAlignment="Left" Grid.Column="1" SelectedIndex="0">
+                        <ComboBoxItem>Black</ComboBoxItem>
+                        <ComboBoxItem>Red</ComboBoxItem>
+                        <ComboBoxItem>Green</ComboBoxItem>
+                        <ComboBoxItem>Yellow</ComboBoxItem>
+                        <ComboBoxItem>Blue</ComboBoxItem>
+                        <ComboBoxItem>Magenta</ComboBoxItem>
+                        <ComboBoxItem>Cyan</ComboBoxItem>
+                        <ComboBoxItem>White</ComboBoxItem>
+                        <ComboBoxItem>LRed</ComboBoxItem>
+                        <ComboBoxItem>LGreen</ComboBoxItem>
+                        <ComboBoxItem>Brown</ComboBoxItem>
+                        <ComboBoxItem>LBlue</ComboBoxItem>
+                        <ComboBoxItem>LMagenta</ComboBoxItem>
+                        <ComboBoxItem>LCyan</ComboBoxItem>
+                        <ComboBoxItem>No Print</ComboBoxItem>
+                        <ComboBoxItem>Dim</ComboBoxItem>
+                        <ComboBoxItem>Help Color</ComboBoxItem>
+                        <ComboBoxItem>Win Color</ComboBoxItem>
+                        <ComboBoxItem>Black Color</ComboBoxItem>
+                        <ComboBoxItem>High Light</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox HorizontalAlignment="Left" Margin="72,192,0,0" Name="ComboBoxLineWidth" Width="115" SelectedIndex="1" Height="25" VerticalAlignment="Top" Grid.Column="1" IsEditable="True">
+                        <ComboBoxItem>0,18</ComboBoxItem>
+                        <ComboBoxItem>0,25</ComboBoxItem>
+                        <ComboBoxItem>0,35</ComboBoxItem>
+                        <ComboBoxItem>0,50</ComboBoxItem>
+                        <ComboBoxItem>0,70</ComboBoxItem>
+                        <ComboBoxItem>1,0</ComboBoxItem>
+                        <ComboBoxItem>2,0</ComboBoxItem>
+                        <ComboBoxItem>3,0</ComboBoxItem>
+                        <ComboBoxItem>4,0</ComboBoxItem>
+                        <ComboBoxItem>5,0</ComboBoxItem>
+                        <ComboBoxItem>7,5</ComboBoxItem>
+                        <ComboBoxItem>10,0</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox HorizontalAlignment="Left" Margin="72,223.02,0,0" Name="ComboBoxLineDistance" Width="115" SelectedIndex="2" Grid.Column="1" Height="25" IsEditable="True" VerticalAlignment="Top">
+                        <ComboBoxItem>1,0</ComboBoxItem>
+                        <ComboBoxItem>2,0</ComboBoxItem>
+                        <ComboBoxItem>3,0</ComboBoxItem>
+                        <ComboBoxItem>4,0</ComboBoxItem>
+                        <ComboBoxItem>5,0</ComboBoxItem>
+                        <ComboBoxItem>7,5</ComboBoxItem>
+                        <ComboBoxItem>10,0</ComboBoxItem>
+                    </ComboBox>
+                    <CheckBox Margin="72,254.04,0,0" Name="CheckBoxLineIsCurved" Width="115" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Grid.Column="1">Curved line</CheckBox>
+                    <Button HorizontalAlignment="Left" Margin="72,285.04,0,0" Name="ButtonLineAddPoint" Width="115" Height="25" VerticalAlignment="Top" Grid.Column="1">Add point</Button>
+                    <Button HorizontalAlignment="Left" Margin="72,316.04,0,0" Name="ButtonLineAddRandomPoint" Width="115" Height="25" VerticalAlignment="Top" Grid.Column="1">Add random point</Button>
+                    <ListBox Margin="193,37,0,0" Name="ListBoxLinePoints" Grid.Column="1" HorizontalAlignment="Left" Width="263" Height="273.04" VerticalAlignment="Top" />
+                    <Label HorizontalAlignment="Left" Margin="193,6,0,0" Name="label11" Width="181" Height="25.04" VerticalAlignment="Top" Grid.Column="1">Points of the line:</Label>
+                    <Button Height="25" HorizontalAlignment="Left" Margin="193,316.04,0,0" Name="ButtonDeletePoint" VerticalAlignment="Top" Width="75" IsEnabled="False" Grid.Column="1">Delete point</Button>
+                    <Button Height="25" Margin="381,316.04,0,0" Name="ButtonClearPoints" VerticalAlignment="Top" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Width="75">Clear points</Button>
+                    <ListBox Margin="462,37,0,0" Name="ListBoxFoundLines" HorizontalAlignment="Left" Width="300" Height="273.04" VerticalAlignment="Top" />
+                    <Button Height="25" Margin="462,6,0,0" Name="ButtonFindLines" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="300">Find lines on active page</Button>
+                    <Button Height="25" Margin="72,347.04,0,0" Name="ButtonCreateLine" VerticalAlignment="Top" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Width="115">Create line</Button>
+                    <Button Height="25" HorizontalAlignment="Left" Margin="647,316.04,0,0" Name="ButtonDeleteLine" VerticalAlignment="Top" Width="115" IsEnabled="False" Grid.Column="1">Delete line</Button>
+                    <Button Height="25" HorizontalAlignment="Left" Margin="647,447.04,0,0" Name="ButtonClearAll" VerticalAlignment="Top" Width="115" IsEnabled="True" Grid.Column="1">Clear all</Button>
+                    <Button Height="25" IsEnabled="False" Margin="526,316.04,0,0" Name="ButtonUpdateLine" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="115">Update line</Button>
+                    <Image Margin="12,406.04,0,0" Name="LT_LineStyleImage" Stretch="Fill" Source="file:///C:/Rossen/DocumentationAutomation/CodeExamples/VB/COMOLE Automation documentation/images/LineStyles.bmp" Height="66" VerticalAlignment="Top" IsEnabled="True" Grid.Column="1" HorizontalAlignment="Left" Width="513" />
+                    <Slider Height="22" Margin="15,378.04,0,0" Name="SliderLineStyle" VerticalAlignment="Top" TickPlacement="BottomRight" Maximum="31" IsSnapToTickEnabled="True" IsEnabled="True" Grid.Column="1" HorizontalAlignment="Left" Width="505" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Circles" Name="TabCircles" IsEnabled="False">
+                <Grid>
+                    <Label Height="25" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label29" VerticalAlignment="Top" Width="181">Position of the circle:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,37,0,0" Name="label30" VerticalAlignment="Top" Width="60">X:</Label>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,37,0,0" Name="TextBoxCircleXPosition" VerticalAlignment="Top" Width="115">50000</TextBox>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,68,0,0" Name="label31" VerticalAlignment="Top" Width="60">Y:</Label>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,68,0,0" Name="TextBoxCircleYPosition" VerticalAlignment="Top" Width="115">50000</TextBox>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,99,0,0" Name="label32" VerticalAlignment="Top" Width="60">Z:</Label>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,99,0,0" Name="TextBoxCircleZPosition" VerticalAlignment="Top" Width="115">0</TextBox>
+                    <Label Height="25" HorizontalAlignment="Left" Margin="6,130,0,0" Name="label33" VerticalAlignment="Top" Width="181">Circle properties:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,161,0,0" Name="label34" VerticalAlignment="Top" Width="60">Radius:</Label>
+                    <Label HorizontalContentAlignment="Right" Margin="6,223,0,0" Name="label35" HorizontalAlignment="Left" Width="60" Height="25.04" VerticalAlignment="Top">End:</Label>
+                    <Label Height="25" HorizontalContentAlignment="Right" Margin="6,192,0,0" Name="label36" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">Start:</Label>
+                    <CheckBox HorizontalAlignment="Left" Margin="72,378.04,0,0" Name="CheckBoxCircleIsFilled" Width="115" Height="25" VerticalAlignment="Top">Filled</CheckBox>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,161,0,0" Name="TextBoxCircleRadius" VerticalAlignment="Top" Width="115">15000</TextBox>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,192,0,0" Name="TextBoxCircleAngleStart" VerticalAlignment="Top" Width="115">0</TextBox>
+                    <TextBox HorizontalAlignment="Left" IsEnabled="True" Margin="72,223.02,0,0" Name="TextBoxCircleAngleEnd" Width="115" Height="25" VerticalAlignment="Top">360</TextBox>
+                    <ComboBox HorizontalAlignment="Left" Margin="72,254.04,0,0" Name="ComboBoxCircleColor" Width="115" Height="25" VerticalAlignment="Top" SelectedIndex="0">
+                        <ComboBoxItem>Black</ComboBoxItem>
+                        <ComboBoxItem>Red</ComboBoxItem>
+                        <ComboBoxItem>Green</ComboBoxItem>
+                        <ComboBoxItem>Yellow</ComboBoxItem>
+                        <ComboBoxItem>Blue</ComboBoxItem>
+                        <ComboBoxItem>Magenta</ComboBoxItem>
+                        <ComboBoxItem>Cyan</ComboBoxItem>
+                        <ComboBoxItem>White</ComboBoxItem>
+                        <ComboBoxItem>LRed</ComboBoxItem>
+                        <ComboBoxItem>LGreen</ComboBoxItem>
+                        <ComboBoxItem>Brown</ComboBoxItem>
+                        <ComboBoxItem>LBlue</ComboBoxItem>
+                        <ComboBoxItem>LMagenta</ComboBoxItem>
+                        <ComboBoxItem>LCyan</ComboBoxItem>
+                        <ComboBoxItem>No Print</ComboBoxItem>
+                        <ComboBoxItem>Dim</ComboBoxItem>
+                        <ComboBoxItem>Help Color</ComboBoxItem>
+                        <ComboBoxItem>Win Color</ComboBoxItem>
+                        <ComboBoxItem>Black Color</ComboBoxItem>
+                        <ComboBoxItem>High Light</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Height="25" HorizontalAlignment="Left" Margin="72,285.04,0,0" Name="TextBoxCircleWidth" VerticalAlignment="Top" Width="115" IsEditable="True" SelectedIndex="1">
+                        <ComboBoxItem>0,18</ComboBoxItem>
+                        <ComboBoxItem>0,25</ComboBoxItem>
+                        <ComboBoxItem>0,35</ComboBoxItem>
+                        <ComboBoxItem>0,50</ComboBoxItem>
+                        <ComboBoxItem>0,70</ComboBoxItem>
+                        <ComboBoxItem>1,0</ComboBoxItem>
+                        <ComboBoxItem>2,0</ComboBoxItem>
+                        <ComboBoxItem>3,0</ComboBoxItem>
+                        <ComboBoxItem>4,0</ComboBoxItem>
+                        <ComboBoxItem>5,0</ComboBoxItem>
+                        <ComboBoxItem>7,5</ComboBoxItem>
+                        <ComboBoxItem>10,0</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Height="25" HorizontalAlignment="Left" Margin="72,316.04,0,0" Name="TextBoxCircleFactor" VerticalAlignment="Top" Width="115" IsEditable="True" SelectedIndex="3">
+                        <ComboBoxItem>0,25</ComboBoxItem>
+                        <ComboBoxItem>0,33</ComboBoxItem>
+                        <ComboBoxItem>0,50</ComboBoxItem>
+                        <ComboBoxItem>1,0</ComboBoxItem>
+                        <ComboBoxItem>2,0</ComboBoxItem>
+                        <ComboBoxItem>3,0</ComboBoxItem>
+                        <ComboBoxItem>4,0</ComboBoxItem>
+                        <ComboBoxItem>5,0</ComboBoxItem>
+                        <ComboBoxItem>7,5</ComboBoxItem>
+                        <ComboBoxItem>10,0</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,347.04,0,0" Name="TextBoxCircleRotation" VerticalAlignment="Top" Width="115">0</TextBox>
+                    <Button Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,409.04,0,0" Name="ButtonCreateCircle" VerticalAlignment="Top" Width="115">Create circle</Button>
+                    <Label HorizontalContentAlignment="Right" Margin="6,254,0,0" Name="label37" HorizontalAlignment="Left" Width="60" Height="25.04" VerticalAlignment="Top">Color:</Label>
+                    <Label HorizontalContentAlignment="Right" Margin="6,285,0,0" Name="label38" HorizontalAlignment="Left" Width="60" Height="25.04" VerticalAlignment="Top">Width:</Label>
+                    <Label Height="25.04" HorizontalContentAlignment="Right" Margin="6,316,0,0" Name="label39" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">Factor:</Label>
+                    <Label Height="25.04" HorizontalContentAlignment="Right" Margin="6,347,0,0" Name="label40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">Rotation:</Label>
+                    <Button Height="25" Margin="193,6,0,0" Name="ButtonFindCircles" VerticalAlignment="Top" HorizontalAlignment="Left" Width="569">Find circles on active page</Button>
+                    <ListBox Margin="193,37,0,0" Name="ListBoxFoundCircles" HorizontalAlignment="Left" Width="569" Height="366.04" VerticalAlignment="Top" />
+                    <Button Height="25" HorizontalAlignment="Left" IsEnabled="False" Margin="647,409.04,0,0" Name="ButtonDeleteCircle" VerticalAlignment="Top" Width="115">Delete circle</Button>
+                    <Button Height="25" IsEnabled="False" Margin="526,409,0,0" Name="ButtonUpdateCircle" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115">Update circle</Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Texts" Name="TabTexts" IsEnabled="False">
+                <Grid>
+                    <Label Height="25" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label41" VerticalAlignment="Top" Width="181">Position of the text:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,37,0,0" Name="label42" VerticalAlignment="Top" Width="60">X:</Label>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,37,0,0" Name="TextBoxTextXPosition" VerticalAlignment="Top" Width="115">100000</TextBox>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,68,0,0" Name="label43" VerticalAlignment="Top" Width="60">Y:</Label>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,68,0,0" Name="TextBoxTextYPosition" VerticalAlignment="Top" Width="115">100000</TextBox>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,99,0,0" Name="label44" VerticalAlignment="Top" Width="60">Z:</Label>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,99,0,0" Name="TextBoxTextZPosition" VerticalAlignment="Top" Width="115">0</TextBox>
+                    <Label Height="25" HorizontalAlignment="Left" Margin="6,130,0,0" Name="label45" VerticalAlignment="Top" Width="181">Text properties:</Label>
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,161,0,0" Name="label46" Width="60" Height="25" VerticalAlignment="Top">Text:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,192,0,0" Name="label47" VerticalAlignment="Top" Width="60">Font:</Label>
+                    <Label HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,223,0,0" Name="label48" Width="60" Height="25" VerticalAlignment="Top">Color:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,254,0,0" Name="label49" VerticalAlignment="Top" Width="60">Height:</Label>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,285,0,0" Name="label50" VerticalAlignment="Top" Width="60">Width:</Label>
+                    <CheckBox Height="25" HorizontalAlignment="Left" Margin="72,347.04,0,0" Name="CheckBoxTextIsBold" VerticalAlignment="Top" Width="115">Bold</CheckBox>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,161,0,0" Name="TextBoxTextText" VerticalAlignment="Top" Width="115" />
+                    <CheckBox Height="25" HorizontalAlignment="Left" Margin="72,378.04,0,0" Name="CheckBoxTextIsItalic" VerticalAlignment="Top" Width="115">Italic</CheckBox>
+                    <Button IsEnabled="True" Margin="72,409.04,0,0" Name="TextButtonCreateText" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115">Create text</Button>
+                    <ComboBox Height="25" HorizontalAlignment="Left" Margin="72,192,0,0" Name="ComboBoxTextFont" VerticalAlignment="Top" Width="115" SelectedIndex="0" />
+                    <ComboBox HorizontalAlignment="Left" Margin="72,223,0,0" Name="ComboBoxTextColor" Width="115" Height="25" VerticalAlignment="Top" SelectedIndex="0">
+                        <ComboBoxItem>Black</ComboBoxItem>
+                        <ComboBoxItem>Red</ComboBoxItem>
+                        <ComboBoxItem>Green</ComboBoxItem>
+                        <ComboBoxItem>Yellow</ComboBoxItem>
+                        <ComboBoxItem>Blue</ComboBoxItem>
+                        <ComboBoxItem>Magenta</ComboBoxItem>
+                        <ComboBoxItem>Cyan</ComboBoxItem>
+                        <ComboBoxItem>White</ComboBoxItem>
+                        <ComboBoxItem>LRed</ComboBoxItem>
+                        <ComboBoxItem>LGreen</ComboBoxItem>
+                        <ComboBoxItem>Brown</ComboBoxItem>
+                        <ComboBoxItem>LBlue</ComboBoxItem>
+                        <ComboBoxItem>LMagenta</ComboBoxItem>
+                        <ComboBoxItem>LCyan</ComboBoxItem>
+                        <ComboBoxItem>No Print</ComboBoxItem>
+                        <ComboBoxItem>Dim</ComboBoxItem>
+                        <ComboBoxItem>Help Color</ComboBoxItem>
+                        <ComboBoxItem>Win Color</ComboBoxItem>
+                        <ComboBoxItem>Black Color</ComboBoxItem>
+                        <ComboBoxItem>High Light</ComboBoxItem>
+                    </ComboBox>
+                    <Label Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="6,316.04,0,0" Name="label51" VerticalAlignment="Top" Width="60">Angle:</Label>
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="72,316.04,0,0" Name="TextBoxTextAngle" VerticalAlignment="Top" Width="115">0</TextBox>
+                    <ComboBox Height="25" HorizontalAlignment="Left" Margin="72,254.04,0,0" Name="ComboBoxTextHeight" VerticalAlignment="Top" Width="115" SelectedIndex="1" IsEditable="True">
+                        <ComboBoxItem>1,0</ComboBoxItem>
+                        <ComboBoxItem>2,0</ComboBoxItem>
+                        <ComboBoxItem>3,0</ComboBoxItem>
+                        <ComboBoxItem>4,0</ComboBoxItem>
+                        <ComboBoxItem>5,0</ComboBoxItem>
+                        <ComboBoxItem>7,5</ComboBoxItem>
+                        <ComboBoxItem>10,0</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Height="25" HorizontalAlignment="Left" Margin="72,285.04,0,0" Name="ComboBoxTextWidth" VerticalAlignment="Top" Width="115" SelectedIndex="0" IsEditable="True">
+                        <ComboBoxItem>&lt;AUTO&gt;</ComboBoxItem>
+                        <ComboBoxItem>1,0</ComboBoxItem>
+                        <ComboBoxItem>2,0</ComboBoxItem>
+                        <ComboBoxItem>3,0</ComboBoxItem>
+                        <ComboBoxItem>4,0</ComboBoxItem>
+                        <ComboBoxItem>5,0</ComboBoxItem>
+                        <ComboBoxItem>7,5</ComboBoxItem>
+                        <ComboBoxItem>10,0</ComboBoxItem>
+                    </ComboBox>
+                    <Button Height="25" Margin="193,6,0,0" Name="ButtonFindTexts" VerticalAlignment="Top" HorizontalAlignment="Left" Width="569">Find texts on active page</Button>
+                    <ListBox Margin="193,37,0,0" Name="ListBoxFoundTexts" Height="366.04" VerticalAlignment="Top" HorizontalAlignment="Left" Width="569" />
+                    <Button Height="25" HorizontalAlignment="Left" IsEnabled="False" Margin="647,409.04,0,0" Name="ButtonDeleteText" VerticalAlignment="Top" Width="115">Delete text</Button>
+                    <Button Height="25" IsEnabled="False" Margin="526,409.04,0,0" Name="ButtonUpdateText" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115">Update text</Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Terminals" Name="TabTerminals" IsEnabled="False">
+                <Grid>
+                    <Button Height="25" HorizontalAlignment="Left" IsEnabled="True" Margin="6,6,0,0" Name="ButtonGetTerminalsAndTheirConnections" VerticalAlignment="Top" Width="230">Get terminals and their connections</Button>
+                    <wfi:WindowsFormsHost Name="TerminalsGrid" Margin="6,37,0,0" HorizontalAlignment="Left" Width="756" Height="437.54" VerticalAlignment="Top" Grid.Column="10">
+                        <wf:DataGridView x:Name="GridViewTerminals" ReadOnly="True">
+                        </wf:DataGridView>
+                    </wfi:WindowsFormsHost>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Connections" Name="TabConnections" IsEnabled="False">
+                <Grid>
+                    <Button Height="25" IsEnabled="True" Name="ButtonGetConnections" Width="115" HorizontalAlignment="Left" Margin="6,6,0,0" VerticalAlignment="Top">Get connections</Button>
+                    <wfi:WindowsFormsHost Name="ConnectionsGrid" Margin="6,37,0,0" Width="236" HorizontalAlignment="Left" Height="437.04" VerticalAlignment="Top">
+                        <wf:DataGridView x:Name="GridViewConnections" ReadOnly="True">
+                        </wf:DataGridView>
+                    </wfi:WindowsFormsHost>
+                    <GroupBox Header="Information" Margin="248,37,0,6" Name="ConT_InformationGroupBox" HorizontalAlignment="Left" Width="208">
+                        <Grid>
+                            <Label Height="25" Margin="6,383.08,0,0" Name="label62" VerticalAlignment="Top" HorizontalAlignment="Left" Width="130">Joins:</Label>
+                            <Label Height="25" Margin="6,352.08,0,0" Name="label63" VerticalAlignment="Top" HorizontalAlignment="Left" Width="130">Lines:</Label>
+                            <Label Height="25" Margin="6,321.08,0,0" Name="label64" VerticalAlignment="Top" HorizontalAlignment="Left" Width="130">Non branch-symbols:</Label>
+                            <Label Height="25" Margin="6,290.08,0,0" Name="label65" VerticalAlignment="Top" HorizontalAlignment="Left" Width="130">Branch-symbols:</Label>
+                            <Label Margin="6,259,0,0" Name="label66" Height="25.08" VerticalAlignment="Top" HorizontalAlignment="Left" Width="130">Symbols (ALL):</Label>
+                            <Label Margin="142,259,0,0" Name="LabelAllSymbolsFound" Width="60" HorizontalAlignment="Left" FontWeight="Bold" Height="25.08" VerticalAlignment="Top">0</Label>
+                            <Label Height="25" HorizontalAlignment="Left" Margin="142,289.08,0,0" Name="LabelBranchSymbolsFound" VerticalAlignment="Top" Width="60" FontWeight="Bold">0</Label>
+                            <Label Height="25" HorizontalAlignment="Left" Margin="142,320.08,0,0" Name="LabelNonBranchSymbolsFound" VerticalAlignment="Top" Width="60" FontWeight="Bold">0</Label>
+                            <Label Height="25" HorizontalAlignment="Left" Margin="142,351.08,0,0" Name="LabelLinesFound" VerticalAlignment="Top" Width="60" FontWeight="Bold">0</Label>
+                            <Label Height="25" HorizontalAlignment="Left" Margin="142,382.08,0,0" Name="ConT_JoinsFoundLabel" VerticalAlignment="Top" Width="60" FontWeight="Bold">0</Label>
+                            <TextBox AcceptsReturn="True" AutoWordSelection="True" HorizontalScrollBarVisibility="Auto" IsReadOnly="True" Margin="6,6,0,0" Name="textBox2" TextDecorations="None" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Width="184" Height="247.08" VerticalAlignment="Top">The connectionlist that will be generated, is limited in that way, that it only look at one page i a Diagram. Furthermore, it dosn't handle joins.Doubles will also be shown, which means thatif X1 is connected to X2, then it will also showthat X2 is connected to X1.To get the best result with this generated netlist,the the page in which the diagram are, should havebeen made with "Mounting correct drawing", turned on.The setting are set under Menu-&gt;Settings-&gt;Tab=Projectdata.Or by code "IPCsApplication-&gt;IPCsDocument-&gt;IPCsDrawing-&gt;IPCsDrawingPreferences-&gt;MountingCorrectDrawing"</TextBox>
+                        </Grid>
+                    </GroupBox>
+                    <Image HorizontalAlignment="Left" Margin="462,184.04,0,0" Name="image1" Stretch="Fill" Width="300" Height="290" VerticalAlignment="Top" Source="file:///C:/Rossen/DocumentationAutomation/CodeExamples/VB/COMOLE Automation documentation/images/SymbolBranch.bmp" />
+                    <TextBox Height="141" HorizontalAlignment="Left" Margin="462,37,0,0" Name="textBox1" VerticalAlignment="Top" Width="300" TextWrapping="Wrap" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" TextDecorations="None" AutoWordSelection="True" IsReadOnly="True" FontSize="16">This shows the different state a "Branch"-symbol can be in. The Symbol.State is shown in blue numbers. The Symbol.Connections[0,1,2] are shown in red. A branchsymbol always have Symbol.Connections.Count = 3</TextBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Data Fields" Name="TabDataFields" IsEnabled="False">
+                <Grid>
+                    <GroupBox Header="Data Fields" HorizontalAlignment="Right" Margin="0,12,6,6" Name="GroupBoxDataFields" Width="221">
+                        <Grid>
+                            <Label Height="25" Margin="33,37,56,0" Name="label72" VerticalAlignment="Top">From project:</Label>
+                            <ComboBox Height="25" Margin="33,68,6,0" Name="ComboBoxDataFromProject" VerticalAlignment="Top" />
+                            <ComboBox Height="25" Margin="33,130,6,0" Name="ComboBoxDataFromPage" VerticalAlignment="Top" />
+                            <Label Margin="33,99,56,0" Name="label73" Height="25.08" VerticalAlignment="Top">From page:</Label>
+                            <Label Height="25" Margin="33,161,56,0" Name="label74" VerticalAlignment="Top">From symbol:</Label>
+                            <ComboBox Height="25" Margin="33,192,6,0" Name="ComboBoxDataFromSymbol" VerticalAlignment="Top" />
+                            <RadioButton HorizontalAlignment="Left" Margin="7,74,0,0" Name="RadioButtonDataFromProject" Width="20" Height="19" VerticalAlignment="Top" IsChecked="True"></RadioButton>
+                            <RadioButton Height="19" HorizontalAlignment="Left" Margin="7,136,0,0" Name="RadioButtonDataFromPage" VerticalAlignment="Top" Width="20"></RadioButton>
+                            <RadioButton Height="19" HorizontalAlignment="Left" Margin="7,198,0,0" Name="RadioButtonDataFromSymbol" VerticalAlignment="Top" Width="20"></RadioButton>
+                            <Label Height="25" Margin="7,354.08,0,0" Name="label83" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120">Create new:</Label>
+                            <ComboBox Height="25" Margin="33,385.08,0,0" Name="ComboboxNewDataDef" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170" />
+                            <TextBox Height="25" Margin="33,417,0,0" Name="TextBoxNewDataDefFieldName" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170">FieldName</TextBox>
+                            <Button Height="25" Margin="33,448,0,0" Name="ButtonCreateDataField" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170">Create</Button>
+                            <Button Height="25" Margin="7,6,0,0" Name="Button1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="196">Update Data Fields</Button>
+                        </Grid>
+                    </GroupBox>
+                    <Button Height="25" HorizontalAlignment="Left" Margin="375,12,0,0" Name="ButtonAddSymbolWithDataField" VerticalAlignment="Top" Width="160">Add symbols with data fields</Button>
+                    <TextBox Margin="401,74,0,0" Name="TextBoxDataFieldXPostion" HorizontalAlignment="Left" Width="134" Height="25.04" VerticalAlignment="Top">100000</TextBox>
+                    <Label Height="25" HorizontalContentAlignment="Left" Margin="375,74,0,0" Name="label75" VerticalAlignment="Top" HorizontalAlignment="Left" Width="20">X:</Label>
+                    <Label Height="25" HorizontalContentAlignment="Left" Margin="375,105,0,0" Name="label76" VerticalAlignment="Top" HorizontalAlignment="Left" Width="20">Y:</Label>
+                    <Label Height="25" HorizontalContentAlignment="Left" Margin="375,136,0,0" Name="label77" VerticalAlignment="Top" HorizontalAlignment="Left" Width="20">Z:</Label>
+                    <TextBox HorizontalAlignment="Left" Margin="401,105,0,0" Name="TextBoxDataFieldYPostion" Width="134" Height="25" VerticalAlignment="Top">100000</TextBox>
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="401,136,0,0" Name="TextBoxDataFieldZPostion" VerticalAlignment="Top" Width="134">0</TextBox>
+                    <Label Height="25" Margin="375,167,0,0" Name="label78" VerticalAlignment="Top" HorizontalAlignment="Left" Width="160">Pretext:</Label>
+                    <TextBox Margin="375,198,0,0" Name="TextBoxDataFieldPretext" HorizontalAlignment="Left" Width="160" Height="25.04" VerticalAlignment="Top">MyPretext</TextBox>
+                    <Label Margin="375,229,0,0" Name="label79" HorizontalAlignment="Left" Width="160" Height="25.04" VerticalAlignment="Top">Symbol name:</Label>
+                    <TextBox Margin="375,260,0,0" Name="TextBoxDataFieldSymbolName" HorizontalAlignment="Left" Width="160" Height="23.04" VerticalAlignment="Top">MySymbolName</TextBox>
+                    <Label Height="25" Margin="375,289,0,0" Name="label80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120">Symbol file name:</Label>
+                    <TextBox Height="25" Margin="375,320,0,0" Name="TextBoxDataFieldSymbolFileName" VerticalAlignment="Top" HorizontalAlignment="Left" Width="160">MySymbolFileName.SYM</TextBox>
+                    <Label Height="25" Margin="375,43,0,0" Name="label81" VerticalAlignment="Top" HorizontalAlignment="Left" Width="160">Position:</Label>
+                    <Button Height="25" Margin="6,12,0,0" Name="ButtonFindSymbolsOnDataFields" VerticalAlignment="Top" HorizontalAlignment="Left" Width="363">Find symbols on active page</Button>
+                    <ListBox Margin="6,43,0,0" Name="ListBoxFoundSymbolsOnDataFields" HorizontalAlignment="Left" Width="363" Height="302" VerticalAlignment="Top" />
+                    <Label Height="25" HorizontalAlignment="Left" Margin="6,351,0,0" Name="label82" VerticalAlignment="Top" Width="120">Data fields:</Label>
+                    <ListBox Height="136" Margin="6,382.04,0,0" Name="ListBoxDataFields" VerticalAlignment="Top" HorizontalAlignment="Left" Width="529" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <TextBox Height="125" Name="TextBoxEventLog" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" IsReadOnly="True" Width="778" Margin="0,562,0,0" />
+    </Grid>
+</Window>

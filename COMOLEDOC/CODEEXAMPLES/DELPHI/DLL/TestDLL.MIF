@@ -1,0 +1,28 @@
+[Modul]
+Title=TestDll 1
+DK_Title=Test af DLL 2
+RU_Title=Test of DLL 3
+CN_Title=Test of DLL 4
+SE_Title=Test of DLL 5
+CZ_Title=Test of DLL 6
+
+[PLUGIN]
+Menu1=Tools
+Name1=1TestDll
+DK_Name1=2 Test af DLL
+RU_Name1=3 Test of DLL
+CN_Name1=4 Test of DLL
+SE_Name1=5 Test of DLL
+CZ_Name1=6 Test of DLL
+Cmd1=TestDLL.dll,0,0,0
+Index1=40
+
+Menu2=Popup
+Name2=TestDll
+DK_Name2=Test af DLL b
+RU_Name2=Test of DLL c
+CN_Name2=Test of DLL d
+SE_Name2=Test of DLL e
+CZ_Name2=Test of DLL f
+Cmd2=TestDLL.dll,0,0,0
+Index2=10
